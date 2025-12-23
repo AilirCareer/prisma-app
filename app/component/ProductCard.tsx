@@ -26,8 +26,7 @@ export function ProductCard({ products }: { products: Product}) {
                     alt={products.name}
                     className="object-cover"
                     fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />                
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>                
             </div>
         <CardHeader>
             <CardTitle>{products.name}</CardTitle>
@@ -36,8 +35,6 @@ export function ProductCard({ products }: { products: Product}) {
         <CardFooter>
             <p className="font-bold mr-auto">Price: ${products.price.toFixed(2)}</p>
         </CardFooter>
-
-
         </Card>
     );
 }
