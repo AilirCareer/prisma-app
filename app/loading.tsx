@@ -1,20 +1,21 @@
-import { ProductCardSkeleton } from "./component/ProductCardSkeleton";
+// app/loading.tsx
+import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
+import Link from "next/link";
 
 export default function Loading() {
-    return (
-        <div className="min-h-screen ">
-              <header>
-                <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
-                  <h1 className="text-3xl font-bold text-gray-900">Our Products</h1>
-                </div>
-              </header>
-              <main className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {Array.from({ length: 2 }).map((_, index) => (
-                    <ProductCardSkeleton key={index} />
-                  ))}
-                </div>
-              </main>
+  return (
+    <main className="flex min-h-screen items-center justify-center bg-background px-4">
+      <div className="text-center">
+        <Skeleton className="h-10 w-56 mx-auto rounded-md" />
+
+        <Skeleton className="mt-3 h-6 w-72 mx-auto rounded-md" />
+
+
+        <div className="mt-6">
+          <Skeleton className="h-10 w-40 mx-auto rounded-md" />
         </div>
-    );
+      </div>
+    </main>
+  );
 }
